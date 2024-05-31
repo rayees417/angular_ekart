@@ -1,0 +1,11 @@
+<app-filter 
+    [all]="totalProductCount"
+    [inStock]="totalProductInStock" 
+    [outOfStock]="totalProductOutOfStock"
+    (onSelectedFilterRadioButtonChanged)="onFilterChanged()">
+
+</app-filter>
+<div class="ekart--products--container">
+
+    <app-product *ngFor="let prod of products" [product]="prod"></app-product>
+</div>
